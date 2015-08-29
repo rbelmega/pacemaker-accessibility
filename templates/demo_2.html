@@ -1,0 +1,29 @@
+<div class="semantic-example">
+	<div>
+		<div role="heading" aria-level="1">Why AngularJS?</div>
+
+		<my-awesome-checkbox tabindex="0" role="checkbox">It's pretty easy to learn
+		</my-awesome-checkbox>
+		<my-awesome-checkbox tabindex="0" role="checkbox">Google has made it!</my-awesome-checkbox>
+		<my-awesome-checkbox tabindex="0" role="checkbox">What is AngularJS?</my-awesome-checkbox>
+
+		<div tabindex="0" role="button" ng-click="saveAnswer()">save answer</div>
+	</div>
+
+	<article>
+		<form ng-submit="saveAnswer()">
+			<h1>Why AngularJS?</h1>
+
+			<input id="answer_1" type="checkbox"/>
+			<label for="answer_1">It's pretty easy to learn</label> <br />
+
+			<input id="answer_2" type="checkbox"/>
+			<label for="answer_2">Google has made it!</label><br />
+
+			<input id="answer_3" type="checkbox"/>
+			<label for="answer_3">What is AngularJS?</label><br />
+
+			<button type="submit">save answer</button>
+		</form>
+	</article>
+</div>

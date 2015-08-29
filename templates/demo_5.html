@@ -1,0 +1,36 @@
+<div class="modal-exp">
+	<button class="fcs-btn" auto-focus="focus.btnFocus" ng-click="showModal()">show modal</button>
+	<div class="modal-overlay" ng-if="modal">
+		<div class="modal" auto-focus="focus.modalFocus">
+			<div class="modal-header">
+				<button type="button" class="close" aria-label="Close" ng-click="closeModal()">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>One fine body&hellip;</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal"
+						ng-click="closeModal()">
+					Close
+				</button>
+				<button type="button" class="btn btn-primary" ng-click="closeModal()">Save changes
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="list-exp">
+	<h1 class="tacos-title" tabindex="0">Tacos:</h1>
+	<ul class="tacos" accessible-list>
+		<li ng-repeat="item in tacos"
+			ng-click="item.selected = !item.selected"
+			ng-class="{'selected' : item.selected}">
+			{{item.name}}
+		</li>
+	</ul>
+	<button class="order-tacos">Order tacos</button>
+</div>

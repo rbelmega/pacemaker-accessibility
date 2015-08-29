@@ -1,0 +1,323 @@
+*, body {
+	margin: 0;
+	padding: 0;
+}
+
+pre {
+	font-family: "Courier";
+	font-size: 12px;
+}
+
+.pseudo-btn {
+	display: inline-block;
+	cursor: default;
+	background: #f2f2f2;
+	padding: 4px;
+	border: 1px solid #ccc;
+}
+
+.message {
+	color: red;
+}
+
+nav {
+	background: #169c9c;
+	height: 80px;
+}
+
+nav h1 {
+	display: inline-block;
+	padding: 0 20px;
+	color: #ffffff;
+}
+
+nav a {
+	color: #ffffff;
+	line-height: 80px;
+	padding: 0 10px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav a.selected,
+nav a:hover {
+	background: #0b7979;
+}
+
+div[ng-view] {
+	padding: 20px 10px;
+}
+
+.acs-test {
+	font-size: 16px;
+	text-align: center;
+	margin: 0 40px;
+}
+
+.acs-test img {
+	margin: 0 auto;
+}
+
+.f-heading {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+}
+
+.acs-test p {
+	text-align: justify;
+}
+
+.acs-test form {
+	margin: 30px auto;
+	width: 400px;
+	text-align: left;
+}
+
+.acs-test form h1 {
+	margin-bottom: 20px;
+}
+
+.acs-test form input {
+	margin-left: 40px;
+}
+
+.info {
+	margin-top: 20px;
+	text-align: center;
+	background: #f2f2f2;
+}
+
+.info a {
+	color: #a3a3a3;
+}
+
+.ang-img {
+	margin-top: 40px;
+	height: 120px;
+	background: url("https://angularjs.org/img/AngularJS-large.png") no-repeat center;
+}
+
+.fcs-btn {
+	padding: 10px;
+}
+
+.fcs-btn:focus {
+	border: 1px solid blue;
+}
+
+body {
+	font-family: 'Open Sans', serif;
+	background: #f2f2f2;
+}
+
+h1 {
+	text-align: center;
+}
+
+pre {
+	font-family: "Courier";
+	font-size: 12px;
+}
+
+.pseudo-btn {
+	display: inline-block;
+	cursor: default;
+	background: #f2f2f2;
+	padding: 4px;
+	border: 1px solid #ccc;
+}
+
+.message {
+	color: red;
+}
+
+.item {
+	position: relative;
+	margin: 20px;
+	padding-top: 10px;
+	background: #ffffff;
+	border: 0px;
+	box-shadow: 1px 1px 1px #ccc
+}
+
+.item h2 {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	color: #cccccc;
+}
+
+.item p,
+.item input,
+.item textarea,
+.item label,
+.item div[ng-message] {
+	margin: 0;
+	margin-left: 10px;
+}
+
+.item div[ng-click],
+.item div[ng-dblclick] {
+	margin: 10px
+}
+
+.item input:last-of-type,
+.item textarea:last-of-type {
+	margin-bottom: 10px;
+}
+
+.item pre {
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	margin: 0;
+	color: #717171;
+}
+
+h2 {
+	margin-left: 20px;
+}
+
+.live-region {
+	text-align: center;
+	width: 300px;
+	margin: auto;
+}
+
+.live-region button {
+	padding: 20px;
+}
+
+/*modal*/
+.fcs-btn {
+	margin: 10% auto;
+	display: block;
+	background: #2686ff;
+	border-color: #2686ff;
+	color: #ffffff;
+	padding: 10px 20px;
+	border-radius: 4px;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.17);
+}
+
+.modal {
+	z-index: 999;
+	background: #ffffff;
+	width: 40%;
+	height: 200px;
+	margin: 10% auto;
+	position: relative;
+}
+
+.modal-header .close {
+	position: absolute;
+	top: 6px;
+	right: 12px;
+	font-size: 22px;
+	background: none;
+	border: 0;
+}
+
+.modal-title {
+	text-align: center;
+	line-height: 40px;
+}
+
+.modal-body {
+	padding: 20px;
+}
+
+.modal-footer {
+	position: absolute;
+	bottom: 0;
+	text-align: right;
+	left: 0;
+	right: 0;
+	padding: 10px;
+}
+
+.modal-footer button {
+	padding: 6px;
+}
+
+/*SEMANTIC*/
+
+.semantic-example div[role="heading"] {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.semantic-example my-awesome-checkbox {
+	display: block;
+}
+
+.semantic-example > div {
+	padding-bottom: 20px;
+}
+
+.semantic-example div[role="button"] {
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 4px;
+	padding: 4px;
+	cursor: pointer;
+}
+
+.semantic-example article {
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+
+/*TACOS*/
+.tacos li {
+	background: #ffffff;
+	padding: 6px 10px;
+	border-bottom: 1px solid #cccccc;
+}
+.tacos li {
+	outline: none;
+}
+.tacos li:hover,
+.tacos li:focus,
+.tacos li.selected {
+	background: #e2f9f6;
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+.tacos li.selected {
+	border-left: 4px solid #38bbab;
+}
+
+.tacos {
+	border: 1px solid #cccccc;
+	max-height: 200px;
+	overflow-y: auto;
+}
+.order-tacos {
+	padding: 10px;
+	margin: 10px;
+	width: calc(100% - 20px);
+	border: 2px solid #b2d9e7;
+	font-size: 18px;
+	border-radius: 3px;
+	background-color: #C3EEFD;
+}
+.order-tacos:focus {
+	outline: none;
+	border: 2px solid #004eeb;
+}
+.tacos-title:focus {
+	outline: none;
+	color: #0050f1;;
+}
