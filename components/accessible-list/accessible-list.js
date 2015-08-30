@@ -15,23 +15,28 @@ angular.module("accessible-list")
 				}, 0, false);
 
 				element.on("keydown", function(e) {
+					var list = element.find("li");
+
 					//prev
-					if (e.keyCode == 38) {
-						element.find("li")[focusIndex].setAttribute("tabindex", -1);
-						element.find("li")[--focusIndex].setAttribute("tabindex", 0);
-						element.find("li")[focusIndex].focus();
+					if (e.keyCode === 38 && focusIndex > 0) {
+						list[focusIndex].setAttribute("tabindex", -1);
+						list[--focusIndex].setAttribute("tabindex", 0);
+						list[focusIndex].focus();
 						scope.$apply();
 						e.preventDefault();
 					}
-					if (e.keyCode == 40) {
-						element.find("li")[focusIndex].setAttribute("tabindex", -1);
-						element.find("li")[++focusIndex].setAttribute("tabindex", 0)
-						element.find("li")[focusIndex].focus();
+					if (e.keyCode === 40 && focusIndex < list.length - 1) {
+						list[focusIndex].setAttribute("tabindex", -1);
+						list[++focusIndex].setAttribute("tabindex", 0);
+						list[focusIndex].focus();
 						scope.$apply();
 						e.preventDefault();
+					}
+
+					if (e.keyCode === 13) {
+						scope.$apply();
 					}
 				});
 			}
 		}
-	}])
-;
+	}]);
