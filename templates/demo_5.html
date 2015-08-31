@@ -1,36 +1,63 @@
-<div class="modal-exp">
-	<button class="fcs-btn" auto-focus="focus.btnFocus" ng-click="showModal()">show modal</button>
-	<div class="modal-overlay" ng-if="modal">
-		<div class="modal" auto-focus="focus.modalFocus">
-			<div class="modal-header">
-				<button type="button" class="close" aria-label="Close" ng-click="closeModal()">
-					<span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">Modal title</h4>
-			</div>
-			<div class="modal-body">
-				<p>One fine body&hellip;</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal"
-						ng-click="closeModal()">
-					Close
-				</button>
-				<button type="button" class="btn btn-primary" ng-click="closeModal()">Save changes
-				</button>
+<div class="view-example">
+
+	<div class="btn-group">
+		<button ng-click="showTacos = false; _showModal = true"
+				ng-class="{'selected': _showModal === true}">modal
+			example</button>
+		<button ng-click="showTacos = true; _showModal = false"
+				ng-class="{'selected': showTacos === true}">tacos example</button>
+	</div>
+
+	<div class="modal-exp" ng-if="_showModal">
+		<button class="fcs-btn" auto-focus="focus.btnFocus" ng-click="showModal()">show modal
+		</button>
+		<div class="modal-overlay" ng-if="modal">
+			<div class="modal" auto-focus="focus.modalFocus">
+				<div class="modal-header">
+					<button type="button" class="close" aria-label="Close" ng-click="closeModal()">
+						<span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<p>One fine body&hellip;</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal"
+							ng-click="closeModal()">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary" ng-click="closeModal()">Save
+						changes
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
+	<div class="list-exp" ng-if="showTacos">
+		<p class="tacos-desc">A taco is a traditional <a
+				href="https://en.wikipedia.org/wiki/Mexican_cuisine">Mexican dish</a> composed of a
+			corn or wheat tortilla folded or rolled around a filling. A taco can be made with a
+			variety of fillings, including beef, pork, chicken, seafood, vegetables and cheese,
+			allowing for great versatility and variety.</p>
 
-<div class="list-exp">
-	<h1 class="tacos-title" tabindex="0">Tacos:</h1>
-	<ul class="tacos" accessible-list>
-		<li ng-repeat="item in tacos"
-			ng-click="item.selected = !item.selected"
-			ng-class="{'selected' : item.selected}">
-			{{item.name}}
-		</li>
-	</ul>
-	<button class="order-tacos">Order tacos</button>
+		<h1 class="tacos-title">Tacos menu:</h1>
+		<ul class="tacos" accessible-list>
+			<li ng-repeat="item in tacos"
+					ng-click="item.selected = !item.selected"
+					ng-class="{'selected' : item.selected}">
+				{{item.name}}
+			</li>
+		</ul>
+
+		<button class="order-tacos">Order tacos</button>
+		<ul class="order-list">
+			<li ng-repeat="item in tacos"
+					ng-if="item.selected">
+				{{item.name}}
+			</li>
+		</ul>
+		<p class="tacos-feedback">Try our tacos and leave feedback <a href="">here</a>. Bon
+			appetite</p>
+	</div>
 </div>

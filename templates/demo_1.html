@@ -1,88 +1,104 @@
-<div class="example">
-	<h2>ngModel</h2>
-	<form>
+<div class="ng-ar">
+	<div class="example">
+		<h2>ngModel</h2>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Input:</p>
-			<input show-attrs ng-model="dm.input" />
-		</div>
+		<form>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Checkbox:</p>
-			<input show-attrs type="checkbox" ng-model="dm.checkbox" />
-		</div>
+			<div class="item">
+				<h2>ngModel</h2>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Radio:</p>
-			<input name="myRadio" show-attrs type="radio" ng-model="dm.radio" value="1" />
-			<input name="myRadio" show-attrs type="radio" ng-model="dm.radio" value="2" />
-		</div>
+				<p>Input:</p>
+				<input show-attrs ng-model="dm.input"/>
+			</div>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Range:</p>
-			<input show-attrs type="range" ng-model="dm.range" min="0" max="25" />
-		</div>
+			<div class="item">
+				<h2>ngModel</h2>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Textarea</p>
-			<textarea show-attrs ng-model="dm.textarea"></textarea>
-		</div>
+				<p>Checkbox:</p>
+				<input show-attrs type="checkbox" ng-model="dm.checkbox"/>
+			</div>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Invalid:</p>
-			<input show-attrs type="email" ng-model="dm.email" />
-		</div>
+			<div class="item">
+				<h2>ngModel</h2>
 
-		<div class="item">
-			<h2>ngModel</h2>
-			<p>Required:</p>
-			<input show-attrs ng-model="dm.required" required />
+				<p>Radio:</p>
+				<input name="myRadio" show-attrs type="radio" ng-model="dm.radio" value="1"/>
+				<input name="myRadio" show-attrs type="radio" ng-model="dm.radio" value="2"/>
+			</div>
+
+			<div class="item">
+				<h2>ngModel</h2>
+
+				<p>Range:</p>
+				<input show-attrs type="range" ng-model="dm.range" min="0" max="25"/>
+			</div>
+
+			<div class="item">
+				<h2>ngModel</h2>
+
+				<p>Textarea</p>
+				<textarea show-attrs ng-model="dm.textarea"></textarea>
+			</div>
+
+			<div class="item">
+				<h2>ngModel</h2>
+
+				<p>Invalid:</p>
+				<input show-attrs type="email" ng-model="dm.email"/>
+			</div>
+
+			<div class="item">
+				<h2>ngModel</h2>
+
+				<p>Required:</p>
+				<input show-attrs ng-model="dm.required" required/>
+			</div>
+		</form>
+	</div>
+
+	<h2>ngDisabled</h2>
+
+	<form class="item">
+		<h2>ngDisabled</h2>
+
+		<p>Disabled:</p>
+		<input type="checkbox" ng-model="vm.disable"/>
+		<button show-attrs type="submit" ng-disabled="vm.disable">Submit</button>
+	</form>
+
+	<h2>ngShow/ngHide</h2>
+
+	<form class="item">
+		<h2>ngShow/ngHide</h2>
+
+		<p>Hide/Show input:</p>
+		<input type="checkbox" ng-model="dm.show"/>
+		<input show-attrs ng-show="dm.show" ng-model="hidden"/>
+	</form>
+
+	<h2>ngClick/ngDblclick</h2>
+
+	<form class="item">
+		<h2>ngClick/ngDblclick</h2>
+
+		<div ng-click="test()" show-attrs class="pseudo-btn"> click me!</div>
+		<div ng-dblclick="test()" show-attrs class="pseudo-btn"> dblclick me!</div>
+	</form>
+
+	<h2>ngMessages</h2>
+
+	<form name="myForm" class="item">
+		<h2>ngMessages</h2>
+		<label>
+			Enter your name:
+			<input type="text" name="myName" ng-model="name" ng-minlength="5" ng-maxlength="20"
+					required/>
+		</label>
+
+		<div ng-messages="myForm.myName.$error" show-attrs class="message">
+			<div ng-message="required">You did not enter a field</div>
+			<div ng-message="minlength">Your field is too short</div>
+			<div ng-message="maxlength">Your field is too long</div>
 		</div>
 	</form>
 </div>
-
-
-<h2>ngDisabled</h2>
-<form class="item">
-	<h2>ngDisabled</h2>
-	<p>Disabled:</p>
-	<input type="checkbox" ng-model="vm.disable" />
-	<button show-attrs type="submit" ng-disabled="vm.disable">Submit</button>
-</form>
-
-
-<h2>ngShow/ngHide</h2>
-<form class="item">
-	<h2>ngShow/ngHide</h2>
-	<p>Hide/Show input:</p>
-	<input type="checkbox" ng-model="dm.show" />
-	<input show-attrs ng-show="dm.show" ng-model="hidden" />
-</form>
-
-<h2>ngClick/ngDblclick</h2>
-<form class="item">
-	<h2>ngClick/ngDblclick</h2>
-	<div ng-click="test()" show-attrs class="pseudo-btn"> click me!</div>
-	<div ng-dblclick="test()" show-attrs class="pseudo-btn"> dblclick me!</div>
-</form>
-
-
-<h2>ngMessages</h2>
-<form name="myForm" class="item">
-	<h2>ngMessages</h2>
-	<label>
-		Enter your name:
-		<input type="text" name="myName" ng-model="name" ng-minlength="5" ng-maxlength="20" required />
-	</label>
-	<div ng-messages="myForm.myName.$error" show-attrs class="message">
-		<div ng-message="required">You did not enter a field</div>
-		<div ng-message="minlength">Your field is too short</div>
-		<div ng-message="maxlength">Your field is too long</div>
-	</div>
-</form>

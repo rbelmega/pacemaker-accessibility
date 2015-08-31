@@ -34,7 +34,9 @@ angular.module("accessible-list")
 					}
 
 					if (e.keyCode === 13) {
-						scope.$apply();
+						$timeout(function(){
+							scope.$apply();
+						});
 					}
 				});
 			}

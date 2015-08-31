@@ -32,11 +32,24 @@ nav h1 {
 }
 
 nav a {
+	font-size: 14px;
+	background: #169c9c;
 	color: #ffffff;
 	line-height: 80px;
 	padding: 0 10px;
 	text-decoration: none;
 	display: inline-block;
+}
+
+@media (max-width: 960px) {
+	nav a {
+		font-size: 12px;
+	}
+}
+@media (max-width: 890px) {
+	nav h1 {
+		font-size: 16px;
+	}
 }
 
 nav a.selected,
@@ -45,7 +58,7 @@ nav a:hover {
 }
 
 div[ng-view] {
-	padding: 20px 10px;
+	/*padding: 20px 10px;*/
 }
 
 .acs-test {
@@ -108,6 +121,10 @@ div[ng-view] {
 
 body {
 	font-family: 'Open Sans', serif;
+}
+
+.ng-ar {
+	padding: 20px 10px;
 	background: #f2f2f2;
 }
 
@@ -192,9 +209,9 @@ h2 {
 .fcs-btn {
 	margin: 10% auto;
 	display: block;
-	background: #2686ff;
-	border-color: #2686ff;
-	color: #ffffff;
+	background: white;
+	border-color: #cccccc;
+	color: #000000;
 	padding: 10px 20px;
 	border-radius: 4px;
 }
@@ -284,40 +301,106 @@ h2 {
 	padding: 6px 10px;
 	border-bottom: 1px solid #cccccc;
 }
+
 .tacos li {
 	outline: none;
 }
+
 .tacos li:hover,
-.tacos li:focus,
-.tacos li.selected {
-	background: #e2f9f6;
+.tacos li:focus {
+	background: #f2f2f2;
 	padding-left: 20px;
 	cursor: pointer;
 }
 
 .tacos li.selected {
-	border-left: 4px solid #38bbab;
+	border-left: 6px solid #38bbab;
+	color: #38bbab;
 }
 
 .tacos {
 	border: 1px solid #cccccc;
-	max-height: 200px;
+	max-height: 340px;
+	margin-bottom: 20px;
 	overflow-y: auto;
 }
+
+.order-list {
+	margin: 12px;
+	display: inline-block;
+	width: 30%;
+	list-style-type: none;
+}
+
+.order-list li {
+	background: #f9f9f9;
+	padding: 12px;
+	font-size: 12px;
+}
+
 .order-tacos {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
 	padding: 10px;
 	margin: 10px;
-	width: calc(100% - 20px);
-	border: 2px solid #b2d9e7;
+	border: 2px solid #149191;
 	font-size: 18px;
 	border-radius: 3px;
-	background-color: #C3EEFD;
+	background: #169c9c;
+	cursor: pointer;
+	color: white;
 }
-.order-tacos:focus {
+
+.order-tacos:focus,
+.order-tacos:hover {
 	outline: none;
-	border: 2px solid #004eeb;
+	background-color: #107474;
+	border: 2px solid #107474;
 }
-.tacos-title:focus {
+
+.view-example {
+	padding: 20px 10px;
+}
+
+.btn-group {
+	width: 250px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.btn-group:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.btn-group button {
 	outline: none;
-	color: #0050f1;;
+	float: left;
+	padding: 12px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 0;
+}
+
+.btn-group button.selected {
+	background: #169c9c;
+	color: white;
+}
+
+.btn-group button:first-child {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-right: none;
+}
+
+.btn-group button:last-child {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-left: none;
+}
+
+.tacos-desc {
+	margin: 20px 12px;
 }
