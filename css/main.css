@@ -407,6 +407,7 @@ h2 {
 
 
 my-awesome-checkbox {
+	outline: none;
 	cursor: pointer;
 	margin: 12px;
 	display: inline-block;
