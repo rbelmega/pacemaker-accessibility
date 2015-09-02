@@ -404,3 +404,61 @@ h2 {
 .tacos-desc {
 	margin: 20px 12px;
 }
+
+
+my-awesome-checkbox {
+	cursor: pointer;
+	margin: 12px;
+	display: inline-block;
+}
+
+my-awesome-checkbox:before {
+	width: 12px;
+	height: 12px;
+	border: 1px solid #000;
+	content: " ";
+	display: inline-block;
+	font-size: 2em;
+	position: relative;
+	top: 2px;
+	left: -4px;
+}
+
+my-awesome-checkbox.active:before {
+	-webkit-animation: spin 1s linear;
+	-moz-animation: spin 1s linear;
+	animation: spin 1s linear;
+	background-color: green;
+	border-color: green;
+}
+
+
+@keyframes spin {
+	0% {
+		background-color: blue;
+		border-color: blue;
+		border-radius: 2px;
+	}
+	25% {
+		background-color: red;
+		border-color: red;
+		border-radius: 6px;
+	}
+	50% {
+		background-color: yellow;
+		border-color: yellow;
+		border-radius: 13px;
+	}
+	75% {
+		background-color: blue;
+		border-color: yellow;
+		border-radius: 6px;
+	}
+	100% {
+		border-radius: 0px;
+		background-color: green;
+		border-color: green;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
